@@ -1,0 +1,5 @@
+# dsh-plugin-archive-last bundle patch: one host row; the browser half ships
+# through the package.json `dsh.client` declaration.
+- insert:
+    - id: archive-last
+      name: 'dsh-plugin-archive-last'

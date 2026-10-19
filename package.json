@@ -1,0 +1,56 @@
+{
+  "name": "dsh-plugin-archive-last",
+  "version": "0.1.0",
+  "private": true,
+  "description": "归档自动沉底：已归档会话自动排到侧栏各工作区列表底部，活跃会话按最近更新保持在前，不再挤占正常对话。",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "archive",
+    "sidebar",
+    "sort",
+    "plugin"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT",
+  "author": "geitaHer0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geitaHer0/dsh-plugin-archive-last.git"
+  },
+  "homepage": "https://github.com/geitaHer0/dsh-plugin-archive-last#readme",
+  "bugs": {
+    "url": "https://github.com/geitaHer0/dsh-plugin-archive-last/issues"
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  }
+}
